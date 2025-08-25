@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in to continue tracking your cycle and wellness."
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_email"
+            app:tint="@android:color/darker_gray" />
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Email"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- Password Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_lock_idle_lock"
+            app:tint="@android:color/darker_gray" />
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/black"/>
+        <ImageView
+            android:id="@+id/iconeye"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/eyeclose"
+            android:paddingLeft="8dp"
+            android:contentDescription="Show Password" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/passwordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You entered a wrong password"
+        android:textColor="#ED4587"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:paddingTop="4dp"
+        android:paddingStart="4dp"/>
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="13sp"
+        android:textColor="#FF60A8"
+        android:gravity="end"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Log In"
+        android:textSize="16sp" />
+
+    <!-- Create Account -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New here?"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"/>
+        <TextView
+            android:id="@+id/createanaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Create an account →"
+            android:textSize="13sp"
+            android:textColor="#FF60A8"
+            android:paddingLeft="4dp"/>
+    </LinearLayout>
+</LinearLayout>

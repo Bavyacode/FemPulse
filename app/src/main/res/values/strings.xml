@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FemPulse</string>
+    <string name="back">Back</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_email_instruction">Enter your email to receive a 4-digit code.</string>
+    <string name="email_hint">Email</string>
+    <string name="send_code">Send Code</string>
+    <string name="email_info">We’ll send a secure code to verify your email address</string>
+    <string name="info_icon">Info icon</string>
+</resources>

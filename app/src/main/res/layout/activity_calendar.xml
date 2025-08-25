@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvCalendarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cycle Calendar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/my_primary"
+        android:layout_gravity="center"
+        android:padding="8dp"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="all"
+        app:mcv_firstDayOfWeek="sunday"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cycle Phases"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:text="🩸 Menstrual " android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:text="🌱 Follicular " android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:text="💧 Ovulatory " android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:text="🌙 Luteal " android:layout_marginBottom="4dp"/>
+
+    </LinearLayout>
+</LinearLayout>

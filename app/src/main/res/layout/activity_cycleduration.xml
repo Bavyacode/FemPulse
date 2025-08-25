@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <!-- App Icon -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/cycle"
+        android:layout_marginTop="40dp"
+        app:tint="#FF4081" />
+
+    <!-- Main Question -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How long does your period \nusually last?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="22dp" />
+
+    <!-- Sub Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the number of days you typically bleed \neach cycle."
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:gravity="center"
+        android:layout_marginTop="8dp" />
+
+    <!-- Counter Controls -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_decrease"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:id="@+id/text_duration"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text=""
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="12dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_increase"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Help Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This helps improve phase tracking and symptom \nforecasting"
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/my_primary"
+        android:visibility="gone"
+        android:paddingTop="8dp"
+        android:textSize="14sp"
+        />
+
+
+    <!-- Uncertain Text -->
+    <TextView
+        android:id="@+id/notsure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm not sure"
+        android:textColor="@color/my_secondary"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="italic" />
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="32dp" />
+</LinearLayout>
