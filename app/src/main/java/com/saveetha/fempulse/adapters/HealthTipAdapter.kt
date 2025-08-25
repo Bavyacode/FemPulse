@@ -28,7 +28,7 @@ class HealthTipAdapter : RecyclerView.Adapter<HealthTipAdapter.ViewHolder>() {
         // Show emoji before the text
         holder.tvTip.text = "${tip.emoji} ${tip.tip.replace(tip.emoji, "").trim()}"
 
-        holder.itemView.setBackgroundResource(R.drawable.bg_tip)
+        holder. itemView.setBackgroundResource(R.drawable.bg_tip)
     }
 
 
