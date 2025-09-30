@@ -63,7 +63,7 @@ class EditIntervalActivity : AppCompatActivity() {
         switchUseAverage.setOnCheckedChangeListener { _, isChecked ->
             useAverage = isChecked
             if (isChecked) {
-                Toast.makeText(this, "Using average interval data", Toast.LENGTH_SHORT).show()
+
             }
         }
 

@@ -48,7 +48,7 @@ class WellnessActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<WellnessResponse>, t: Throwable) {
-                    Toast.makeText(this@WellnessActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+
                     t.printStackTrace()
                 }
             })

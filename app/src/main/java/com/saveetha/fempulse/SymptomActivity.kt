@@ -76,7 +76,7 @@ class SymptomsActivity : AppCompatActivity() {
     private fun setupRecycler(symptoms: List<Symptom>) {
         adapter = SymptomAdapter(symptoms) { selectedList ->
             val selectedNames = selectedList.joinToString { it.name }
-            Toast.makeText(this, "Selected: $selectedNames", Toast.LENGTH_SHORT).show()
+
         }
         recyclerView.layoutManager = GridLayoutManager(this, 3)
         recyclerView.adapter = adapter

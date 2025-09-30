@@ -57,7 +57,7 @@ class CycledurationActivity : AppCompatActivity() {
             duration = 5  // fallback
             updateDurationText()
             showDefaultDurationDialog()
-            Toast.makeText(this, "Defaulting to 5 days", Toast.LENGTH_SHORT).show()
+
         }
 
         btnContinue.setOnClickListener {

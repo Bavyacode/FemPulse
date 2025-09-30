@@ -54,7 +54,7 @@ class EditLengthActivity : AppCompatActivity() {
             useAverage = isChecked
             if (isChecked) {
                 // If average is ON → (Example: assign default from cycle_data later)
-                Toast.makeText(this, "Using average cycle data", Toast.LENGTH_SHORT).show()
+
             }
         }
 

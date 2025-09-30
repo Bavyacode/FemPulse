@@ -57,7 +57,7 @@ class CycleintervalActivity : AppCompatActivity() {
             interval_days = 28  // fallback
             updateIntervalText()
             showDefaultIntervalDialog()
-            Toast.makeText(this, "Defaulting to 28 days", Toast.LENGTH_SHORT).show()
+
         }
 
         Continuebtn.setOnClickListener {

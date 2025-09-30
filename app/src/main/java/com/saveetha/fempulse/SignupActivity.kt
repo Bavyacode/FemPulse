@@ -128,7 +128,7 @@ class SignupActivity : AppCompatActivity() {
                     otp3.text.toString() + otp4.text.toString()
 
             if (enteredOtp == sentOtp) {
-                Toast.makeText(this, "Email Verified!", Toast.LENGTH_SHORT).show()
+
                 emailVerified = true
                 // Disable email field
                 email.isEnabled = false

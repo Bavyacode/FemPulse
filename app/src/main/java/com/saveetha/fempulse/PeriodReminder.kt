@@ -92,7 +92,7 @@ class PeriodReminder(private val activity: RemindersActivity) {
             // Start WorkManager to check daily
             scheduleDailyPeriodCheck(activity)
 
-            Toast.makeText(activity, "Period reminders set!", Toast.LENGTH_SHORT).show()
+
         }
     }
 }
