@@ -30,7 +30,7 @@ class SettingsActivity : AppCompatActivity() {
         val editprofile = findViewById<LinearLayout>(R.id.edit_profile)
         editprofile.setOnClickListener {
             val intent = Intent(this, EditprofileActivity::class.java)
-            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+
             startActivity(intent)
         }
 
@@ -43,7 +43,7 @@ class SettingsActivity : AppCompatActivity() {
         val editlengthlayout = findViewById<LinearLayout>(R.id.edit_length_layout)
         editlengthlayout.setOnClickListener {
             val intent = Intent(this, EditLengthActivity::class.java)
-            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+
             startActivity(intent)
         }
         val editintervallayout = findViewById<LinearLayout>(R.id.edit_interval)
@@ -82,7 +82,7 @@ class SettingsActivity : AppCompatActivity() {
         val addsymptoms = findViewById<Button>(R.id.addsymp)
         addsymptoms.setOnClickListener {
             val intent = Intent(this, AddlogsActivity::class.java)
-            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+
             startActivity(intent)
         }
 
