@@ -37,7 +37,7 @@ class SettingsActivity : AppCompatActivity() {
         val notificationhistory = findViewById<LinearLayout>(R.id.notification_history_layout)
         notificationhistory.setOnClickListener {
             val intent = Intent(this, NotificationhistoryActivity::class.java)
-            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+
             startActivity(intent)
         }
         val editlengthlayout = findViewById<LinearLayout>(R.id.edit_length_layout)
