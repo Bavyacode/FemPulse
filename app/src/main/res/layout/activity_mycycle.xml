@@ -5,17 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MycycleActivity">
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center_vertical"
-        android:background="@color/my_primary">
+        >
 
         <ImageView
+            android:id="@+id/backButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/leftarrow" />
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My Cycle"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/my_primary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -66,6 +66,7 @@
                     android:layout_height="22dp"
                     android:src="@drawable/drop"/>
                 <TextView
+                    android:id="@+id/tvAveragePeriodDays"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Days"
@@ -74,6 +75,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tvAveragePeriodLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Average Period"
@@ -99,6 +101,7 @@
                     android:layout_height="22dp"
                     android:src="@drawable/cycle"/>
                 <TextView
+                    android:id="@+id/tvAverageCycleDays"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Days"
@@ -107,6 +110,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tvAverageCycleLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Average Cycle"
@@ -117,6 +121,7 @@
 
 
     <Button
+        android:id="@+id/addperiod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
@@ -134,6 +139,7 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFullHistory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"

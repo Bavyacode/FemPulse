@@ -3,6 +3,22 @@ data class SymptomResponse(
     val status: String,
     val symptoms: List<Symptom>
 )
+data class WellnessTip(
+    val tip: String,
+    val emoji: String = "🤍" // fallback emoji for wellness
+)
+
+// Top-level response
+data class WellnessResponse(
+    val status: String,
+    val age: String,
+    val is_student: Boolean,
+    val symptoms: List<String>,
+    val phase: String,
+    val tips: Map<String, List<String>>
+)
+
+
 
 
 data class Symptom(

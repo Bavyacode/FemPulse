@@ -14,12 +14,13 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center_vertical"
-        android:background="@color/my_primary">
+        android:background="@color/my_secondary">
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/leftarrow" />
+            android:src="@drawable/leftarrow"
+            app:tint="@color/white" />
 
         <Space
             android:layout_width="0dp"
@@ -45,6 +46,7 @@
         android:padding="16dp">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"

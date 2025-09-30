@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
+    android:background="#F4E0E9"
     android:padding="16dp">
 
     <TextView
@@ -27,6 +27,7 @@
 
         <!-- Period Log Card -->
         <LinearLayout
+            android:id="@+id/periodlog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"

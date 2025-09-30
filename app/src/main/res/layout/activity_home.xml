@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F4E0E9">
 
     <!-- Main Content Area -->
     <LinearLayout
@@ -26,7 +27,7 @@
                 android:orientation="horizontal"
                 android:padding="24dp"
                 android:gravity="center_vertical"
-                android:background="@android:color/white">
+                >
 
                 <ImageView
                     android:id="@+id/iconMenu"
@@ -111,12 +112,23 @@
                             android:textSize="14sp" />
                     </LinearLayout>
 
+                    <Button
+                        android:id="@+id/home_edit_period"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Period"
+                        android:layout_gravity="center"
+                        android:background="@drawable/edittext_bg"
+                        android:backgroundTint="@color/my_secondary"
+                        android:layout_marginBottom="16dp"
+                        />
+
                     <!-- Wellness Card -->
                     <LinearLayout
                         android:id="@+id/wellnessCard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/wellnesscard"
+                        android:background="@drawable/edittext_bg"
                         android:padding="16dp"
                         android:layout_marginBottom="12dp">
 
@@ -125,9 +137,16 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Wellness &amp; Self-Care\nStay confident during periods!"
-                            android:textColor="#FFFFFF"
+                            android:text="Wellness &amp; Self-Care\nEmbrace comfort and confidence!"
+                            android:textColor="#000000"
                             android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/arrowright"
+                            android:layout_gravity="center_vertical"
+                            app:tint="#000000" />
                     </LinearLayout>
 
                     <!-- Next Period / Next Phase -->
@@ -472,6 +491,63 @@
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </GridLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recent History"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="12dp"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerViewRecentHistory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                tools:listitem="@layout/history"
+                                android:padding="8dp"
+                                tools:itemCount="3"/>
+
+                            <!-- Divider Line -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#DDDDDD"
+                                android:layout_marginTop="6dp"
+                              />
+
+                            <TextView
+                                android:id="@+id/tvMoreHistory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More"
+                                android:textColor="@color/my_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:padding="8dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
 
                 </LinearLayout>
             </ScrollView>

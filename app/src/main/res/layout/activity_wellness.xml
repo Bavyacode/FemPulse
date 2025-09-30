@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:padding="24dp">
+    android:background="#F4E0E9"
+    android:padding="16dp">
 
 
 
@@ -249,19 +251,15 @@
 
             </LinearLayout>
 
-            <!-- Log how you feel today Button -->
-            <Button
-                android:id="@+id/btn_log_feeling"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Log how you feel today"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@drawable/rounded_button"
-                android:layout_marginBottom="32dp"
-                android:elevation="2dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please wait , it may take a while"
+                android:layout_gravity="center"
+                android:textSize="12sp"/>
 
         </LinearLayout>
+
 
     </ScrollView>
 

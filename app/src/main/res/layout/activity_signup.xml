@@ -3,7 +3,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#F4E0E9">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,16 +116,117 @@
                 android:textSize="14sp"
                 android:textColor="#000000"/>
         </LinearLayout>
-
-        <!-- Email Field -->
-        <EditText
-            android:id="@+id/email"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
             android:background="@drawable/edittext_background"
-            android:padding="12dp"
-            android:inputType="textEmailAddress"/>
+            >
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/btnVerifyEmail"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@null"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnVerifyEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:text="VERIFY"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <!-- OTP Layout -->
+        <LinearLayout
+            android:id="@+id/otpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:background="#f8f8f8"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:background="@drawable/otp_box"
+                android:layout_margin="6dp"
+                />
+
+            <EditText
+                android:id="@+id/otp2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:background="@drawable/otp_box"
+                android:layout_margin="6dp"
+                />
+
+            <EditText
+                android:id="@+id/otp3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:background="@drawable/otp_box"
+                android:layout_margin="6dp"
+                />
+
+            <EditText
+                android:id="@+id/otp4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:background="@drawable/otp_box"
+                android:layout_margin="6dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/otpError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"
+            android:text="Invalid OTP"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btnConfirmOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:backgroundTint="#ED4587"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"/>
 
         <!-- Password Label -->
         <LinearLayout
@@ -190,6 +291,9 @@
             android:backgroundTint="#ED4587"
             android:textColor="#FFFFFF"
             android:layout_marginTop="24dp" />
+
+
+
 
         <!-- Login Text -->
         <TextView

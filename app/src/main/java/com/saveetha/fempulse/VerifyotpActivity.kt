@@ -68,7 +68,8 @@ class VerifyOtpActivity : AppCompatActivity() {
 
             if (enteredOtp == correctOtp) {
                 Toast.makeText(this, "OTP Verified", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, ChangePasswordActivity::class.java)
+                intent.putExtra("email", email)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             } else {

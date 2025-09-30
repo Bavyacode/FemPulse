@@ -42,6 +42,13 @@ class CalendarActivity : BaseActivity() {
 
         fetchPhases(userId)
     }
+    override fun onResume() {
+        super.onResume()
+        val sharedPref = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+        val userId = sharedPref.getInt("user_id", -1)
+        if(userId != -1) fetchPhases(userId)
+    }
+
 
     private fun fetchPhases(userId: Int) {
         val api = RetrofitClient.instance

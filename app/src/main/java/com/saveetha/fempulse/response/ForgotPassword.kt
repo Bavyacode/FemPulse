@@ -7,3 +7,13 @@ data class ForgotPasswordResponse(
     val message: String,
     val otp: String
 )
+
+data class ChangePasswordRequest(
+    val email: String,
+    val new_password: String
+)
+
+data class ChangePasswordResponse(
+    val status: String,
+    val message: String
+)

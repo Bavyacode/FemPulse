@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:padding="16dp">
 
         <!-- Title -->
@@ -23,6 +24,7 @@
 
         <!-- Edit Profile -->
         <LinearLayout
+            android:id="@+id/edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -92,6 +94,7 @@
 
         <!-- Edit Period Length -->
         <LinearLayout
+            android:id="@+id/edit_length_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -118,6 +121,7 @@
 
         <!-- Edit Period Interval -->
         <LinearLayout
+            android:id="@+id/edit_interval"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -138,17 +142,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="😂Edit Period Interval"
-                android:textSize="25sp" />
+                android:text="Edit Period Interval"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <!-- Add Symptoms Button -->
         <Button
+            android:id="@+id/addsymp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Symptoms"
-            android:backgroundTint="#FF4081"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/my_secondary"
+            android:textColor="#000000"
             android:layout_marginTop="16dp" />
 
         <TextView
@@ -199,6 +204,7 @@
 
         <!-- PCOD Guidelines -->
         <LinearLayout
+            android:id="@+id/Pcos_guidelines"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -219,12 +225,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PCOD Guidelines"
+                android:text="PCOS Guidelines"
                 android:textSize="16sp" />
         </LinearLayout>
 
         <!-- PCOD Symptoms -->
         <LinearLayout
+            android:id="@+id/pcos_symptoms_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -245,12 +252,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PCOD Symptoms"
+                android:text="PCOS Symptoms"
                 android:textSize="16sp" />
         </LinearLayout>
 
         <!-- Period Myths Busted -->
         <LinearLayout
+            android:id="@+id/myths"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -277,6 +285,7 @@
 
         <!-- Period Hygiene Tips -->
         <LinearLayout
+            android:id="@+id/hygiene"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -303,6 +312,7 @@
 
         <!-- Help & Support Button -->
         <Button
+            android:id="@+id/help_support"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Help &amp; Support"

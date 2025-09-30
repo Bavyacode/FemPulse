@@ -9,6 +9,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#F4E0E9"
     tools:context=".WelcomePageActivity">
 
     <LinearLayout

@@ -68,8 +68,12 @@ dependencies {
     implementation ("com.jakewharton.threetenabp:threetenabp:1.4.4")
     implementation ("com.prolificinteractive:material-calendarview:1.4.3")
     implementation ("androidx.emoji2:emoji2:1.4.0")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
     implementation ("androidx.emoji2:emoji2-views:1.4.0")
-
+    implementation ("io.noties.markwon:core:4.6.2")
+    implementation ("com.kizitonwose.calendar:view:2.0.4")
+    implementation ("androidx.work:work-runtime-ktx:2.9.1")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation ("com.google.code.gson:gson:2.10.1") // or latest version

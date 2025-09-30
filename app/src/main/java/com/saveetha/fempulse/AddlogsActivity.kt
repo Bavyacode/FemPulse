@@ -26,7 +26,7 @@ import retrofit2.Response
 class AddlogsActivity : BaseActivity() {
 
     private lateinit var recyclerViewTips: RecyclerView
-
+    override fun getCurrentNavId(): Int = R.id.nav_add
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -43,13 +43,23 @@ class AddlogsActivity : BaseActivity() {
         }
 
         findViewById<LinearLayout>(R.id.physical).setOnClickListener {
-            startActivity(Intent(this, SymptomsActivity::class.java).putExtra("category", "physical"))
+            startActivity(
+                Intent(this, SymptomsActivity::class.java).putExtra(
+                    "category",
+                    "physical"
+                )
+            )
         }
         findViewById<LinearLayout>(R.id.mood).setOnClickListener {
             startActivity(Intent(this, SymptomsActivity::class.java).putExtra("category", "mood"))
         }
         findViewById<LinearLayout>(R.id.behaviour).setOnClickListener {
-            startActivity(Intent(this, SymptomsActivity::class.java).putExtra("category", "behavioral"))
+            startActivity(
+                Intent(this, SymptomsActivity::class.java).putExtra(
+                    "category",
+                    "behavioral"
+                )
+            )
         }
 
         val btnTips = findViewById<Button>(R.id.btnThird)
@@ -57,6 +67,10 @@ class AddlogsActivity : BaseActivity() {
             val sharedPrefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
             val userId = sharedPrefs.getInt("user_id", -1)
             startActivity(Intent(this, HealthTipsActivity::class.java).putExtra("user_id", userId))
+        }
+        val log : LinearLayout = findViewById(R.id.periodlog)
+        log.setOnClickListener {
+            startActivity(Intent(this,HomeeditperiodActivity::class.java))
         }
 
     }

@@ -1,216 +1,226 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- res/layout/activity_insights.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/rootInsights"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InsightsActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical"
-        android:background="@color/my_primary">
+    android:padding="16dp"
+    android:background="#FFFFFF">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/leftarrow" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Insights"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/tailoredTipsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tailored Tips"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:layout_gravity="center"
-            />
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <ImageView
-            android:id="@+id/tips"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:src="@drawable/arrowright"
-            app:tint="@color/black"
-            android:layout_marginEnd="20dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="10dp">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            app:cardCornerRadius="12dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:background="@color/normal_pink"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/pinkbox"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/nutrition" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nutrition"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            app:cardCornerRadius="12dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:background="@color/normal_pink"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/pinkbox"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/fitness" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fitness"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            app:cardCornerRadius="12dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:background="@color/normal_pink"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/pinkbox"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/cycle" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cycle"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-
+    <!-- Page Title -->
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Analysis"
-        android:layout_marginStart="20dp"
-        android:textColor="@color/black"
+        android:text="Insights"
         android:textSize="22sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/my_primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
+    <!-- NEW USER STATE -->
+    <LinearLayout
+        android:id="@+id/stateNewUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:background="#FFF5F5"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvNewUserMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Once you start logging your physical, mental, and behavioral symptoms, we’ll generate daily, weekly, and monthly insights tailored to your health journey."
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnStartLogging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log your first symptoms"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <!-- INSUFFICIENT DATA STATE -->
+    <LinearLayout
+        android:id="@+id/stateInsufficient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFDEB"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keep going!"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvInsufficientMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We need a bit more data to draw meaningful charts. Please log your upcoming cycles and symptoms regularly."
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- INSIGHTS CONTENT -->
+    <ScrollView
+        android:id="@+id/stateInsights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Cycle Lengths -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cycle Length Trend "
+                android:textStyle="bold"
+                android:textColor="@color/my_primary"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineCycleLengths"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvCyclePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log at least 2-3 cycles to see cycle trends"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Period Durations -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Period Duration Trend"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineDurations"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDurationPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log upcoming cycle dates regularly to see trends"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Top Symptoms -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Symptoms"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barTopSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvTopPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log symptoms to unlock Top Symptoms insights"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Category Split -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Symptoms by Category"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieCategory"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvCatPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log different symptoms to see category distribution"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Small facts -->
+            <TextView
+                android:id="@+id/tvFacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Refresh button at bottom -->
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refresh Insights"
+        android:background="@drawable/greyround"
+        android:textColor="@color/my_primary"
+        android:layout_marginTop="8dp"/>
 </LinearLayout>

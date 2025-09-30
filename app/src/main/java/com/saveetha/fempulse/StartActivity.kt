@@ -10,9 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class StartActivity : AppCompatActivity() {
-   
     private val splashDuration: Long = 2000 // 2 seconds
-
     private lateinit var dot1: TextView
     private lateinit var dot2: TextView
     private lateinit var dot3: TextView
@@ -26,7 +24,7 @@ class StartActivity : AppCompatActivity() {
                 textView.visibility = if (index == dotIndex % 3) View.VISIBLE else View.INVISIBLE
             }
             dotIndex++
-            dotHandler.postDelayed(this, 400) // every 400ms
+            dotHandler.postDelayed(this, 400)
         }
     }
 
@@ -43,13 +41,25 @@ class StartActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             dotHandler.removeCallbacks(dotRunnable)
 
-            val intent=Intent(this, LoginsignupActivity::class.java)
+            // ✅ Check login status
+            val sharedPref: SharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+            val userId = sharedPref.getInt("user_id", -1)
 
+            if (userId != -1) {
+                // Already logged in → go to Home
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                val prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+                prefs.edit().putBoolean("is_new_user", false).apply()
 
-            startActivity(intent)
+            } else {
+                // Not logged in → go to Login/Signup
+                val intent = Intent(this, LoginsignupActivity::class.java)
+                startActivity(intent)
+            }
+
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
-
         }, splashDuration)
     }
 }

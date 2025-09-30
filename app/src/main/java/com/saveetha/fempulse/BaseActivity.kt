@@ -32,24 +32,44 @@ open class BaseActivity : AppCompatActivity() {
 
             when (item.itemId) {
                 R.id.nav_home -> {
-                    if (this !is HomeActivity) startActivity(Intent(this, HomeActivity::class.java))
+                    if (this !is HomeActivity) {
+                        val intent = Intent(this, HomeActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        finish()
+                    }
                     true
                 }
                 R.id.nav_calendar -> {
-                    if (this !is CalendarActivity) startActivity(Intent(this, CalendarActivity::class.java))
+                    if (this !is CalendarActivity) {
+                        val intent = Intent(this, CalendarActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        finish()
+                    }
                     true
                 }
                 R.id.nav_add -> {
-                    if (this !is AddlogsActivity) startActivity(Intent(this, AddlogsActivity::class.java))
+                    if (this !is AddlogsActivity) {
+                        val intent = Intent(this, AddlogsActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        finish()
+                    }
                     true
                 }
                 R.id.nav_stats -> {
-                    if (this !is StatsActivity) startActivity(Intent(this, StatsActivity::class.java))
+                    if (this !is InsightsActivity) {
+                        val intent = Intent(this, InsightsActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        finish()
+                    }
                     true
                 }
-
                 else -> false
             }
+
         }
     }
 

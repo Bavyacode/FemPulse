@@ -5,6 +5,10 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="light_pink">#FFB6C1</color>
+    <color name="grey">#B0B0B0</color>
+    <color name="grey_light">#E0E0E0</color>
+    <color name="dark_grey">#606060</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="theme">#FF69B4</color>
@@ -16,5 +20,10 @@
     <color name="ovulatoryYellow">#FFF3C4</color>
     <color name="lutealOrange">#EDE6F7</color>
     <color name="defaultPhaseColor">#E0E0E0</color>
+    <color name="physicalColor">#DBEAFE</color> <!-- red-ish -->
+    <color name="moodColor">#FEF9C3</color> <!-- green-ish -->
+    <color name="behavioralColor">#F3E8FF</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
 
 </resources>

@@ -1,9 +1,11 @@
 package com.saveetha.fempulse
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +46,10 @@ class SymptomsActivity : AppCompatActivity() {
 
         btnSave.setOnClickListener {
             saveSelectedSymptoms()
+        }
+        val back : ImageView = findViewById(R.id.back)
+        back.setOnClickListener {
+            finish() // close activity, go back
         }
     }
 

@@ -5,6 +5,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -18,26 +24,46 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HomeeditperiodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditIntervalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditLengthActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WellnessTipsActivity"
+            android:exported="true" />
+        <activity
             android:name=".HealthTipsActivity"
             android:exported="true" />
         <activity
             android:name=".BaseActivity"
             android:exported="true" />
         <activity
-            android:name=".StatsActivity"
-            android:exported="false" />
-        <activity
             android:name=".EditPeriodActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".HelpsupportActivity"
             android:exported="true" />
         <activity
             android:name=".NewuserinsightActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".CalendarActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".HamburgermenuActivity"
             android:exported="true" />
@@ -51,9 +77,6 @@
             android:name=".WellnessActivity"
             android:exported="true" />
         <activity
-            android:name=".RemindersActivity"
-            android:exported="false" />
-        <activity
             android:name=".WrongcodeActivity"
             android:exported="false" />
         <activity
@@ -64,11 +87,11 @@
             android:exported="true" />
         <activity
             android:name=".AddlogsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".SymptomsActivity"
             android:exported="true" />
-
         <activity
             android:name=".StartActivity"
             android:exported="true"
@@ -85,11 +108,11 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".SignupActivity"
             android:exported="true" />
-
         <activity
             android:name=".CycleintervalActivity"
             android:exported="true" />
@@ -100,23 +123,40 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MycycleActivity"
-            android:exported="false" />
+            android:name=".MyCycleActivity"
+            android:exported="true" />
         <activity
             android:name=".InsightsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".RemindersActivity"
+            android:exported="true" />
         <activity
             android:name=".NotificationhistoryActivity"
             android:exported="false" />
         <activity
             android:name=".EditprofileActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SettingsActivity"
             android:exported="true" />
+
         <activity
             android:name=".WelcomePageActivity"
             android:exported="true" />
+        <receiver android:name=".ReminderReceiver" />
+        <receiver android:name=".BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".PeriodReminderReceiver"
+            android:exported="true"/>
+
+
+
     </application>
 
 </manifest>

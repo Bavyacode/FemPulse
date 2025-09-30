@@ -152,6 +152,7 @@
             android:src="@drawable/star" />
 
         <TextView
+            android:id="@+id/tvRateUs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -161,6 +162,7 @@
     </LinearLayout>
 
     <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
