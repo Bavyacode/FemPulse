@@ -59,6 +59,8 @@ class HomeActivity : BaseActivity() {
         super.onResume()
         val sharedPref = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
         val userId = sharedPref.getInt("user_id", -1)
+        val username = sharedPref.getString("username", "User") ?: "User"
+        tvUserGreeting.text = "Hi, $username!"
         if (userId != -1) {
             // Refetch latest cycle data to update UI after returning from edit
             fetchAndDisplayPhases(userId)

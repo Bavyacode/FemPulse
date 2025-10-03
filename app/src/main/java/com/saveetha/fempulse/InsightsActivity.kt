@@ -65,13 +65,11 @@ class InsightsActivity : BaseActivity() {
         stateInsights = findViewById(R.id.stateInsights)
         btnRefresh = findViewById(R.id.btnRefresh)
 
-        lineCycle = findViewById(R.id.lineCycleLengths)
-        lineDuration = findViewById(R.id.lineDurations)
+
         barTop = findViewById(R.id.barTopSymptoms)
         pieCat = findViewById(R.id.pieCategory)
         tvFacts = findViewById(R.id.tvFacts)
-        tvCyclePlaceholder = findViewById(R.id.tvCyclePlaceholder)
-        tvDurationPlaceholder = findViewById(R.id.tvDurationPlaceholder)
+
         tvTopPlaceholder = findViewById(R.id.tvTopPlaceholder)
         tvCatPlaceholder = findViewById(R.id.tvCatPlaceholder)
 
@@ -133,25 +131,8 @@ class InsightsActivity : BaseActivity() {
                 // ✅ Otherwise, show insights section and fill graphs selectively
                 showInsights()
 
-                // ---- Cycle Lengths ----
-                if (hasCycleData) {
-                    renderLine(lineCycle, cycles, "Cycle Lengths")
-                    lineCycle.visibility = View.VISIBLE
-                    tvCyclePlaceholder.visibility = View.GONE
-                } else {
-                    lineCycle.visibility = View.GONE
-                    tvCyclePlaceholder.visibility = View.VISIBLE
-                }
 
-                // ---- Period Durations ----
-                if (hasDurationData) {
-                    renderLine(lineDuration, durations, "Period Durations")
-                    lineDuration.visibility = View.VISIBLE
-                    tvDurationPlaceholder.visibility = View.GONE
-                } else {
-                    lineDuration.visibility = View.GONE
-                    tvDurationPlaceholder.visibility = View.VISIBLE
-                }
+
 
                 // ---- Top Symptoms ----
                 if (hasTop) {
@@ -185,22 +166,6 @@ class InsightsActivity : BaseActivity() {
     }
 
 
-    private fun renderLine(chart: LineChart, values: List<Int>, label: String) {
-
-        val entries = values.mapIndexed { idx, v -> Entry(idx.toFloat(), v.toFloat()) }
-        val set = LineDataSet(entries, label).apply {
-            setDrawCircles(true)
-
-            circleRadius = 3f
-            lineWidth = 2f
-            valueTextSize = 10f
-        }
-        chart.data = LineData(set)
-        chart.description = Description().apply { text = "" }
-        chart.axisRight.isEnabled = false
-        chart.xAxis.granularity = 1f
-        chart.invalidate()
-    }
 
     private fun renderBar(chart: BarChart, items: List<TopSymptomItem>) {
         val entries = items.mapIndexed { idx, it -> BarEntry(idx.toFloat(), it.frequency.toFloat()) }
@@ -220,6 +185,12 @@ class InsightsActivity : BaseActivity() {
         chart.axisLeft.setDrawGridLines(false)
         chart.axisRight.setDrawGridLines(false)
         chart.xAxis.setDrawGridLines(false)
+        chart.xAxis.apply {
+            labelRotationAngle = -45f   // tilt labels for better fit
+            granularity = 1f
+            isGranularityEnabled = true
+        }
+
         chart.axisLeft.setDrawAxisLine(false)
         chart.axisRight.setDrawAxisLine(false)
         chart.xAxis.setDrawAxisLine(false)
@@ -257,7 +228,7 @@ class InsightsActivity : BaseActivity() {
 
         val set = PieDataSet(entries, "Symptoms").apply {
             this.colors = colors
-            valueTextColor = getColor(R.color.my_primary)
+            valueTextColor = Color.BLACK
             valueTextSize = 12f
         }
 

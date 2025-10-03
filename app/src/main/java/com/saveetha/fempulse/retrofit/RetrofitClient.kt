@@ -8,7 +8,7 @@ import com.google.gson.GsonBuilder
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val BASE_URL = "http://10.47.186.73/fem_health/"
+    private const val BASE_URL = "http://14.139.187.229:8081/fempulse/"
 
     private val gson = GsonBuilder()
         .setLenient()

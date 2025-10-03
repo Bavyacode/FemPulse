@@ -127,6 +127,11 @@ class EditprofileActivity : AppCompatActivity() {
                         tvEmail.text = profile.email
                         etCycleLength.setText(profile.cycle_length?.toString() ?: "")
                         etCycleInterval.setText(profile.cycle_duration?.toString() ?: "")
+
+                        val sharedPref = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+                        sharedPref.edit()
+                            .putString("username", profile.username)
+                            .apply()
                     }
 
                     // Back to view mode
